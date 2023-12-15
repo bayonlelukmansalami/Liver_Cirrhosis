@@ -37,7 +37,7 @@ mm = MinMaxScaler()
 X_mm = mm.fit_transform(X)
 test_mm = mm.transform(test1)
 
-sample_submission = pd.read_csv('submission.csv')
+#sample_submission = pd.read_csv('submission.csv')
 
 model = XGBClassifier(booster='gbtree', max_depth=3, learning_rate=0.0916440028226021, n_estimators=575, 
                    min_child_weight=1, subsample=0.5593359384273137, colsample_bylevel= 0.6551948667255165, 
