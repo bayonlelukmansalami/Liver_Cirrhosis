@@ -108,12 +108,12 @@ ss = StandardScaler()
 user_input = ss.fit_transform(user_input)
 # Make prediction
 prediction = model.predict(user_input)[0]
-if prediction == 0:
-    return "Status_D patient was deceased at N_Days"
-elif prediction == 1:
-    return "Status_C patient was alive at N_Days"
-else:
-    return "Status_CL patient was alive at N_Days due to liver a transplant"
+#if prediction == 0:
+    #return "Status_D patient was deceased at N_Days"
+#elif prediction == 1:
+    #return "Status_C patient was alive at N_Days"
+#else:
+    #return "Status_CL patient was alive at N_Days due to liver a transplant"
 prediction_label = le.inverse_transform([prediction])[0]
 
 # Display prediction
