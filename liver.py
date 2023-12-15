@@ -39,12 +39,12 @@ test_mm = mm.transform(test1)
 
 sample_submission = pd.read_csv('sample_submission.csv')
 
-xg = XGBClassifier(booster='gbtree', max_depth=3, learning_rate=0.0916440028226021, n_estimators=575, 
+model = XGBClassifier(booster='gbtree', max_depth=3, learning_rate=0.0916440028226021, n_estimators=575, 
                    min_child_weight=1, subsample=0.5593359384273137, colsample_bylevel= 0.6551948667255165, 
                    colsample_bytree=0.3604143952025156, colsample_bynode= 0.9868067661365549, 
                    reg_alpha=0.6985074556560505,reg_lambda= 0.04977711432256354, eval_metric='mlogloss')
 
-xg.fit(X_mm, y)
+model.fit(X_mm, y)
 
 # Streamlit app
 st.title('Liver Disease Prediction App')
@@ -108,13 +108,13 @@ ss = StandardScaler()
 user_input = ss.fit_transform(user_input)
 # Make prediction
 prediction = model.predict(user_input)[0]
-#if prediction == 0:
-    #return "Status_D patient was deceased at N_Days"
-#elif prediction == 1:
-    #return "Status_C patient was alive at N_Days"
-#else:
-    #return "Status_CL patient was alive at N_Days due to liver a transplant"
-#prediction_label = le.inverse_transform([prediction])[0]
+if prediction == 0:
+    return "Status_D patient was deceased at N_Days"
+elif prediction == 1:
+    return "Status_C patient was alive at N_Days"
+else:
+    return "Status_CL patient was alive at N_Days due to liver a transplant"
+prediction_label = le.inverse_transform([prediction])[0]
 
 # Display prediction
 st.write('## Prediction')
