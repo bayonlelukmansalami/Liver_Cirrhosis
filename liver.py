@@ -114,7 +114,6 @@ prediction = model.predict(user_input)[0]
     #return "Status_C patient was alive at N_Days"
 #else:
     #return "Status_CL patient was alive at N_Days due to liver a transplant"
-prediction_label = le.inverse_transform([prediction])[0]
 
 # Display prediction
 st.write('## Prediction')
