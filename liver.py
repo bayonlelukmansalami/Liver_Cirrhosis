@@ -51,7 +51,7 @@ st.title('Liver Disease Prediction App')
 
 # Display the DataFrame
 st.write('## Dataset')
-st.write(df)
+st.write(train)
 
 # Sidebar inputs
 st.sidebar.title('Prediction Inputs')
