@@ -107,7 +107,7 @@ user_input = pd.DataFrame({
 ss = StandardScaler()
 user_input = ss.fit_transform(user_input)
 # Make prediction
-prediction = model.predict(user_input)[0]
+prediction = model.predict(user_input) #[0]
 #if prediction == 0:
     #return "Status_D patient was deceased at N_Days"
 #elif prediction == 1:
