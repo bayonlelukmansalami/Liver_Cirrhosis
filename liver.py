@@ -49,10 +49,6 @@ model.fit(X_mm, y)
 # Streamlit app
 st.title('Liver Disease Prediction App')
 
-# Display the DataFrame
-st.write('## Dataset')
-st.write(train)
-
 # Sidebar inputs
 st.sidebar.title('Prediction Inputs')
 
@@ -104,6 +100,11 @@ user_input = pd.DataFrame({
     'Edema_Y': [Edema_Y]
     
 })
+
+# Display the DataFrame
+st.write('## Dataset')
+st.write(user_input)
+
 ss = StandardScaler()
 user_input = ss.fit_transform(user_input)
 # Make prediction
