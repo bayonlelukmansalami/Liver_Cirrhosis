@@ -53,8 +53,8 @@ st.title('Liver Disease Prediction App')
 st.sidebar.title('Prediction Inputs')
 
 
-n_days = st.sidebar.slider('n_Days', min_value=41, max_value=4795, value=182)
-age = st.sidebar.slider('age', min_value=9598, max_value=28650, value=10000)
+n_days = st.sidebar.slider('N_Days', min_value=41, max_value=4795, value=182)
+Age = st.sidebar.slider('Age', min_value=9598, max_value=28650, value=10000)
 Bilirubin = st.sidebar.slider('Bilirubin', min_value=0.3, max_value=28, value=20)
 Cholesterol = st.sidebar.slider('Cholesterol', min_value=9598, max_value=28650, value=10000)
 Albumin = st.sidebar.slider('Albumin', min_value=9598, max_value=28650, value=10000)
